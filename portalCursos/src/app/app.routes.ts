@@ -9,6 +9,7 @@ export const routes: Routes = [
         path: 'login'
     },
     {
-        path: 'tela-cursos', 
+        path: 'meus-cursos', 
+    }
     */
 ];
