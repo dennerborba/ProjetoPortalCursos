@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("portal-cursos.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9bcf8d985c52227e458c99a4c64fb7bfd04177d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d718a9c5e8f973e829b9d7a7260cb3b20c4025f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("portal-cursos.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("portal-cursos.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
