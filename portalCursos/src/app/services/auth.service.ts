@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../enviroments/enviroment';
+
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface LoginRequest {
   email: string;

@@ -27,7 +27,7 @@ export class CursosComponent {
         console.log(this.cursosApi)
       },
       error: (erro) => {
-        alert('correu um erro ao buscar os cursos na api -> /api/cursos')
+        alert('Ocorreu um erro ao buscar os cursos na api -> /api/cursos')
         console.log(`Ocorreu um erro ao realizar a requisição: ${erro}`)
       }
     })
