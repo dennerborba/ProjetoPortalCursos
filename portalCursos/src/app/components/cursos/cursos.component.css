@@ -1,0 +1,15 @@
+.container {
+    margin: 0 auto;
+    width: 82em;
+}
+
+.container__body {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.container__header-title h1 {
+    font-family: var(--fonte-principal);
+    color: #7e181c
+}
