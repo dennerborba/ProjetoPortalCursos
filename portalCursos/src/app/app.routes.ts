@@ -5,20 +5,6 @@ import { CadastroUserComponent } from './page/cadastro-user/cadastro-user.compon
 import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-<<<<<<< Updated upstream
-    /*
-    {
-        path: 'cadastro',
-    },
-    {
-        path: 'login'
-    },
-    {
-        path: 'meus-cursos', 
-    }
-    */
-];
-=======
     { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroUserComponent },
   { path: 'home', component: AppComponent },
