@@ -1,0 +1,12 @@
+<section class="container">
+    <div class="container__header">
+        <div class="container__header-title">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+    <div class="container__body">
+        @for (curso of cursosApi; track $index) {
+            <app-curso-card [nome_curso]="curso.nome_Curso" [descricao]="curso.descricao" [instrutor]="curso.instrutor" [urlImagem]="curso.urlImagem"></app-curso-card>
+        }
+    </div>
+</section>
