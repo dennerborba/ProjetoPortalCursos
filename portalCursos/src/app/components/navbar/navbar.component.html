@@ -6,8 +6,5 @@
         <a routerLink="/cadastro" *ngIf="!authService.isLoggedIn()">Cadastro</a>
 
         <a (click)="logout()" *ngIf="authService.isLoggedIn()">Sair</a>
-        <a routerLink="/tela-cursos">Meus Cursos</a>
-        <a routerLink="/login">Entrar</a>
-        <a routerLink="/cadastro">Cadastro</a>
     </div>
 </nav>
