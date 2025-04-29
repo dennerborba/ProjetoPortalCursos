@@ -14,7 +14,11 @@ var serverVersion = new MySqlServerVersion(new Version(8, 0, 38));
 builder.Services.AddDbContext<CursoDbContext>(options =>
     options.UseMySql(connectionString, serverVersion));
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(connectionString, serverVersion));
+
 builder.Services.AddScoped<ICursoRepository, CursoRepository>();    
+builder.Services.AddScoped<IUserRepository, UserRepository>();    
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

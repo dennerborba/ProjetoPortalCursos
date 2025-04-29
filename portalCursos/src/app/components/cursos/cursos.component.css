@@ -1,7 +1,7 @@
 .container {
     margin: 0 auto;
     width: 82em;
-    height: 40vh;
+    margin-bottom: 2em;
 }
 
 .container{
@@ -12,7 +12,7 @@
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
-    margin: 0 auto;
+    
 }
 
 .container__header-title h1 {
