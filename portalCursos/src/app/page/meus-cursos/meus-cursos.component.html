@@ -1,0 +1,19 @@
+<section class="container">
+    <div class="container__title">
+        <h1>{{title}}</h1>
+    </div>
+    @for (curso of cursos; track $index) {
+        <div class="card">
+            <div class="card__title">
+                <h1>{{curso.nome_Curso}}</h1>
+            </div>
+            <div class="card__body">
+                <h2>{{curso.descricao}}</h2>
+                <h2>{{curso.instrutor}}</h2>
+            </div>
+            <div class="card__image">
+                <img [src]="curso.urlImagem">
+            </div>
+        </div>
+    }
+</section>

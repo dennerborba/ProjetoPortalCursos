@@ -17,5 +17,7 @@ namespace portal_cursos.api.Model
         public string Instrutor { get; set; }
 
         public string UrlImagem { get; set; }
+
+        public List<User> Users { get; set; }   
     }
 }

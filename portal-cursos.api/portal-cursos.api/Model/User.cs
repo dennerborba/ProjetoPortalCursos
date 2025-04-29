@@ -16,5 +16,7 @@ namespace portal_cursos.api.Model
         [Required(ErrorMessage = "A Senha é obrigatória.")]
         [StringLength(100, MinimumLength = 6, ErrorMessage = "A senha deve ter no mínimo 6 caracteres.")]
         public string Senha { get; set; }
+
+        public List<Curso> Cursos { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace portal_cursos.api.Infra.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
 
         // configurar tabelas aqui
         protected override void OnModelCreating(ModelBuilder modelBuilder)

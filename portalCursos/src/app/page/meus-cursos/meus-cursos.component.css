@@ -1,0 +1,36 @@
+section {
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.container__title {
+    padding: 1.5em;
+    background-color: #7e181c;
+    color: #fff;
+}
+
+.card__title h1 {
+    color: #7e181c;
+}
+
+.card__body {
+    font-size: 0.8em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 2em;
+    background-color: #f8eacc;
+    border-radius: 8px;
+    margin: 1.5em;
+}
+
+img {
+    width: 200px;
+    border: solid 2px #7e181c;
+    border-radius: 4px;
+}

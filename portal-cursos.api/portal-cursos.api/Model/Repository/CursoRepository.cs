@@ -18,16 +18,41 @@ namespace portal_cursos.api.Model.Repository
             return await _cursoDbContext.Cursos.ToListAsync();
         }
 
-        
-        public async Task<Curso> BuscarCursoID(int cursoID)
+        public async Task<Curso> InscreverUsuario(int cursoId, int usuarioId)
         {
-            var lCurso = await _cursoDbContext.Cursos.FirstOrDefaultAsync(a => a.Id == cursoID);
-            if (lCurso == null) 
+            var usuario = await _cursoDbContext.Users.Include(a => a.Cursos)
+                .FirstOrDefaultAsync(a => a.Id == usuarioId);
+
+            var curso = await _cursoDbContext.Cursos.FindAsync(cursoId);
+
+            if (usuario == null || curso == null)
             {
-                return lCurso;
+                throw new Exception("Usuário ou curso não encontrado!");
+            } 
+
+            if (usuario.Cursos.Contains(curso))
+            {
+                throw new Exception("Usuário já inscrito neste curso!");
             }
 
-            throw new Exception("Curso não encontrado.");
+            usuario.Cursos.Add(curso);
+
+            await _cursoDbContext.SaveChangesAsync();
+
+            return curso;
+        }
+
+        public async Task<List<Curso>> ObterCursosUsuario(int usuarioId)
+        {
+            var usuario = await _cursoDbContext.Users.Include(a => a.Cursos)
+                .FirstOrDefaultAsync(a => a.Id == usuarioId);
+
+            if (usuario == null)
+            {
+                throw new Exception("Usuário não encontrado!");
+            }
+
+            return usuario.Cursos.ToList();
         }
     }
 }

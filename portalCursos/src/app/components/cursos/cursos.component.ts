@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CursoCardComponent } from '../curso-card/curso-card.component';
 import { CursoService } from '../../services/curso.service';
+import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
   standalone: true,
-  imports: [CursoCardComponent],
+  imports: [CursoCardComponent, CommonModule],
   templateUrl: './cursos.component.html',
   styleUrl: './cursos.component.css'
 })
@@ -14,7 +17,7 @@ export class CursosComponent {
 
   @Input() title: string = 'Diversos cursos de tecnologia para você se inscrever gratuitamente!'
 
-  constructor(private cursoService: CursoService) { }
+  constructor(private cursoService: CursoService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCursos()
@@ -31,5 +34,22 @@ export class CursosComponent {
         console.log(`Ocorreu um erro ao realizar a requisição: ${erro}`)
       }
     })
+  }
+
+  inscrever(curso: any) {
+    if (this.authService.isLoggedIn()) {
+      this.cursoService.inscrever(curso).subscribe({
+        next: (response) => {
+          alert('Inscrição realizada!')
+          console.log(response)
+        },
+        error: (erro) => {
+          alert('Houve um erro ao se inscrever')
+          console.log(erro.message)
+        }
+      })
+    } else {
+      this.router.navigate(['/login'])
+    }
   }
 }

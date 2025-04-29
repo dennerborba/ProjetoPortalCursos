@@ -3,6 +3,7 @@
     public interface ICursoRepository
     {
         Task<List<Curso>> Listar();
-        Task<Curso> BuscarCursoID(int cursoID);
+        Task<Curso> InscreverUsuario(int cursoId, int usuarioId);
+        Task<List<Curso>> ObterCursosUsuario(int usuarioId);
     }
 }

@@ -42,8 +42,8 @@ export class AuthService {
     const urlCadastro = `${this.apiUrl}/cadastro`;
     return this.http.post<any>(urlCadastro, dados).pipe(
       catchError(error => {
-        console.error('Erro no cadastro:', error); // Exibe o erro no console
-        return throwError(() => error); // Retorna um novo Observable com o erro
+        console.error('Erro no cadastro:', error); 
+        return throwError(() => error); 
       })
     );
   }
@@ -67,13 +67,17 @@ export class AuthService {
         localStorage.setItem('token', response.token);
       }),
       catchError((error) => {
-        console.error('Erro no login:', error); // Exibe o erro no console
-        return throwError(() => error); // Retorna um novo Observable com o erro
+        console.error('Erro no login:', error); 
+        return throwError(() => error); 
       })
     );
   }
 
-  logout() {
+  isLoggedIn(): boolean {
+    return localStorage.getItem('token') !== null
+  }
+
+  logout(): void {
     this.nomeUsuario = '';
     this.usuarioLogado = false;
     localStorage.removeItem('token');

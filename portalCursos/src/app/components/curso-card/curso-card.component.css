@@ -30,16 +30,7 @@
     flex-grow: 1;
 }
 
-.card__body button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7e181c;
-    color: #fff;
-    cursor: pointer;
-    font-family: var(--fonte-principal);
-    margin-top: auto;
-}
+
 
 .card__body_description {
     font-size: 0.8em;
@@ -53,9 +44,6 @@
     text-overflow: ellipsis;
 }
 
-.card__body button:hover {
-    background-color: #a3272b;
-}
 
 .card__body_image {
     display: flex;

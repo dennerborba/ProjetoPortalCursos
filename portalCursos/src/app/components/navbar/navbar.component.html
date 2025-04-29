@@ -1,6 +1,11 @@
 <nav>
     <span class="logo"><a routerLink=""><img src="assets/logo-zentora.png"></a></span>
     <div class="menu">
+        <a routerLink="/meus-cursos" *ngIf="authService.isLoggedIn()">Meus Cursos</a>
+        <a routerLink="/login" *ngIf="!authService.isLoggedIn()">Entrar</a>
+        <a routerLink="/cadastro" *ngIf="!authService.isLoggedIn()">Cadastro</a>
+
+        <a (click)="logout()" *ngIf="authService.isLoggedIn()">Sair</a>
         <a routerLink="/tela-cursos">Meus Cursos</a>
         <a routerLink="/login">Entrar</a>
         <a routerLink="/cadastro">Cadastro</a>
