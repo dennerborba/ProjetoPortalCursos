@@ -31,7 +31,7 @@ export class CadastroUserComponent {
     this.authService.cadastrar(this.cadastroRequest).subscribe({
       next: (response) => {
         alert('Cadastro realizado com sucesso!');
-        this.router.navigate(['']);
+        this.router.navigate(['/login']);
       },
       error: (error) => {
         alert('Erro ao cadastrar usuário.');

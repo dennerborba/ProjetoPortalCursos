@@ -18,11 +18,11 @@ namespace portal_cursos.api.Controllers
         }
 
         [HttpPost("api/auth/login")]
-        public IActionResult Login([FromBody] LoginRequest loginRequest)
+        public async Task <IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
             try
             {
-                var usuario = _repository.Login(loginRequest).Result;
+                var usuario = await _repository.Login(loginRequest);
                 return Ok(new LoginResponse() { Token = usuario.Id.ToString() });
             }
             catch (Exception e)
@@ -32,11 +32,11 @@ namespace portal_cursos.api.Controllers
         }
 
         [HttpPost("api/auth/cadastro")]
-        public IActionResult Cadastro([FromBody] CadastroRequest cadastroRequest)
+        public async Task <IActionResult> Cadastro([FromBody] CadastroRequest cadastroRequest)
         {
             try
             {
-                var usuario = _repository.Cadastrar(cadastroRequest).Result;
+                var usuario = await _repository.Cadastrar(cadastroRequest);
                 return Ok(new LoginResponse() { Token = usuario.Id.ToString() });
             }
             catch (Exception e)

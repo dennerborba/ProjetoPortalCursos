@@ -6,7 +6,9 @@
     </div>
     <div class="container__body">
         @for (curso of cursosApi; track $index) {
-            <app-curso-card [nome_curso]="curso.nome_Curso" [descricao]="curso.descricao" [instrutor]="curso.instrutor" [urlImagem]="curso.urlImagem"></app-curso-card>
+            <app-curso-card [nome_curso]="curso.nome_Curso" [descricao]="curso.descricao" [instrutor]="curso.instrutor" [urlImagem]="curso.urlImagem">
+                <button (click)="inscrever(curso)">Inscrever-se</button>
+            </app-curso-card>
         }
     </div>
 </section>

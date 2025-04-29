@@ -7,6 +7,7 @@ namespace portal_cursos.api.Infra.Data
     {
         public CursoDbContext(DbContextOptions<CursoDbContext> options) : base(options) { }
         
+        public DbSet<User> Users { get; set; }
         public DbSet<Curso> Cursos { get; set; }
     }
 }

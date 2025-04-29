@@ -13,3 +13,18 @@
     font-family: var(--fonte-principal);
     color: #7e181c
 }
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7e181c;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #a3272b;
+}

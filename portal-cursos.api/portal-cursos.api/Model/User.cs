@@ -14,5 +14,7 @@ namespace portal_cursos.api.Model
         public string Email { get; set; }
         [Required]
         public string Senha { get; set; }
+
+        public List<Curso> Cursos { get; set; }
     }
 }
