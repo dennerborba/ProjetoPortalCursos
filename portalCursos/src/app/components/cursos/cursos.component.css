@@ -1,12 +1,18 @@
 .container {
     margin: 0 auto;
     width: 82em;
+    height: 40vh;
+}
+
+.container{
+    background-color: #d1060600;
 }
 
 .container__body {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .container__header-title h1 {

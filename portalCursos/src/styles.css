@@ -5,6 +5,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     background-color: #f8f4eb;
+    height: 100vh;
 }
 
 :root {

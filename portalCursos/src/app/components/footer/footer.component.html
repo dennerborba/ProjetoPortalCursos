@@ -1,0 +1,51 @@
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <p>&copy; {{ currentYear }} Todos os direitos reservados</p>
+        <p>{{ companyName }}</p>
+        <p>CNPJ: {{ companyCNPJ }}</p>
+        <p>{{ companyAddress }}</p>
+        <p>CEP: {{ companyCEP }}</p>
+  
+        <p>Contato:</p>
+        <p>
+          Se você comprou um produto:
+          <a [href]="'mailto:' + buyersEmail">{{ buyersEmail }}</a>
+        </p>
+        <p>
+          Se você é infoprodutor:
+          <a [href]="'mailto:' + producersEmail">{{ producersEmail }}</a>
+        </p>
+      </div>
+  
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Plataforma</h4>
+          <a href="#">Taxas</a>
+          <a href="#">FAQ</a>
+          <a href="#">Ajuda</a>
+          <a href="#">Curso Zentora</a>
+          <a href="#">Página de Status</a>
+        </div>
+  
+        <div class="footer-column">
+          <h4>A Empresa</h4>
+          <a href="#">Contato</a>
+          <a href="#">Sobre nós</a>
+          <a href="#">Denúncias de Produto Proibido e Plágio/Pirataria</a>
+          <a href="#">Transparência Salarial</a>
+          <a href="#">Canal de Denúncias (Linha Ética)</a>
+        </div>
+  
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <a href="#">Termos de uso</a>
+          <a href="#">Termos de uso Zenpay</a>
+          <a href="#">Termos de licença de software</a>
+          <a href="#">Política de conteúdo</a>
+          <a href="#">Política de privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
